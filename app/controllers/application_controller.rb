@@ -32,4 +32,13 @@ class ApplicationController < ActionController::Base
   def user_payment_new
     render({ :template => "formtemplates/user_payment_new.html.erb"})
   end
+  def user_random_results
+    @minimum = params.fetch("minimum_input").to_f
+    @maximum = params.fetch("maximum_input").to_f
+    @random_results = rand((@minimum..@maximum))
+    render({ :template => "formtemplates/user_random_results.html.erb"})
+  end
+  def user_random_new
+    render({ :template => "formtemplates/user_random_new.html.erb"})
+  end
 end

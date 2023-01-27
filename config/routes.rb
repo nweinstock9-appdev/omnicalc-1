@@ -5,4 +5,6 @@ Rails.application.routes.draw do
   get("/square_root/new", { :controller => "application", :action => "user_sqrt_input"})
   get("/payment/results", { :controller => "application", :action => "user_payment_results"})
   get("/payment/new", { :controller => "application", :action => "user_payment_new"})
+  get("/random/new", { :controller => "application", :action => "user_random_new"})
+  get("/random/results", { :controller => "application", :action => "user_random_results"})
 end
